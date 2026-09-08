@@ -1,0 +1,12 @@
+[
+  { "id": 1, "nombre": "Laptop Dell Latitude 5420", "tipo": "laptop", "estado": "asignado", "sede": "Quito", "responsable": "Ana Villacis", "anioCompra": 2022 },
+  { "id": 2, "nombre": "Laptop HP ProBook 450", "tipo": "laptop", "estado": "disponible", "sede": "Quito", "responsable": null, "anioCompra": 2023 },
+  { "id": 3, "nombre": "Impresora Epson L3250", "tipo": "impresora", "estado": "mantenimiento", "sede": "Quito", "responsable": null, "anioCompra": 2021 },
+  { "id": 4, "nombre": "Switch TP-Link 24 puertos", "tipo": "red", "estado": "asignado", "sede": "Guayaquil", "responsable": "Soporte TIC", "anioCompra": 2020 },
+  { "id": 5, "nombre": "Monitor LG 24 pulgadas", "tipo": "monitor", "estado": "disponible", "sede": "Quito", "responsable": null, "anioCompra": 2023 },
+  { "id": 6, "nombre": "PC Escritorio Lenovo ThinkCentre", "tipo": "pc", "estado": "asignado", "sede": "Cuenca", "responsable": "Luis Ramos", "anioCompra": 2019 },
+  { "id": 7, "nombre": "Access Point Ubiquiti UAP-AC", "tipo": "red", "estado": "disponible", "sede": "Guayaquil", "responsable": null, "anioCompra": 2022 },
+  { "id": 8, "nombre": "Laptop Asus VivoBook 15", "tipo": "laptop", "estado": "de baja", "sede": "Quito", "responsable": null, "anioCompra": 2017 },
+  { "id": 9, "nombre": "Impresora Brother HL-1212W", "tipo": "impresora", "estado": "asignado", "sede": "Cuenca", "responsable": "Recepcion", "anioCompra": 2021 },
+  { "id": 10, "nombre": "Telefono IP Grandstream GXP1625", "tipo": "telefonia", "estado": "disponible", "sede": "Quito", "responsable": null, "anioCompra": 2024 }
+]
