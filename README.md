@@ -11,16 +11,7 @@ TIC a través de una API, con un panel web que consume esa API.
 
 ## Instalación
 
-```bash
-git clone https://github.com/Mdavid2000/prueba-tecnica-tic.git
-npm run dev
-```
-
 Abre `http://localhost:3000` en tu navegador: ahí está el panel.
-
-> `npm run dev` reinicia el servidor solo cada vez que guardas un cambio.
-> Si prefieres arrancarlo sin recarga automática, usa `npm start` (en ese caso
-> debes detenerlo con Ctrl+C y volver a levantarlo tras cada modificación).
 
 ## Cómo está organizado
 
