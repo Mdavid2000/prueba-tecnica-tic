@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario TIC · RoboticMinds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <header class="barra">
+    <div class="barra__marca">
+      <span class="barra__punto" aria-hidden="true"></span>
+      <span>RoboticMinds</span>
+    </div>
+    <p class="barra__ruta">Área de TIC / Inventario de equipos</p>
+  </header>
+
+  <main class="hoja">
+
+    <!-- ── Resumen ─────────────────────────────────────────────── -->
+    <section class="bloque" aria-labelledby="t-resumen">
+      <div class="bloque__cabecera">
+        <h1 id="t-resumen">Inventario de equipos</h1>
+        <button class="boton-texto" id="btn-recargar" type="button">Recargar</button>
+      </div>
+
+      <div id="resumen-zona">
+        <p class="cargando">Consultando el resumen…</p>
+      </div>
+    </section>
+
+    <!-- ── Buscador por código ─────────────────────────────────── -->
+    <section class="bloque" aria-labelledby="t-buscar">
+      <h2 id="t-buscar">Buscar un equipo por código</h2>
+      <div class="buscador">
+        <label class="campo campo--corto">
+          <span>Código</span>
+          <input type="number" id="entrada-id" min="1" placeholder="1" value="1">
+        </label>
+        <button class="boton" id="btn-buscar" type="button">Buscar equipo</button>
+      </div>
+      <div id="detalle-zona" class="detalle-zona"></div>
+    </section>
+
+    <!-- ── Listado ─────────────────────────────────────────────── -->
+    <section class="bloque" aria-labelledby="t-listado">
+      <div class="bloque__cabecera">
+        <h2 id="t-listado">Equipos registrados</h2>
+        <span class="conteo" id="conteo-listado"></span>
+      </div>
+
+      <div class="filtros">
+        <label class="campo">
+          <span>Estado</span>
+          <select id="filtro-estado">
+            <option value="">Todos</option>
+            <option value="asignado">Asignado</option>
+            <option value="disponible">Disponible</option>
+            <option value="mantenimiento">En mantenimiento</option>
+            <option value="de baja">De baja</option>
+          </select>
+        </label>
+        <label class="campo">
+          <span>Tipo</span>
+          <select id="filtro-tipo">
+            <option value="">Todos</option>
+            <option value="laptop">Laptop</option>
+            <option value="pc">PC de escritorio</option>
+            <option value="impresora">Impresora</option>
+            <option value="monitor">Monitor</option>
+            <option value="red">Equipo de red</option>
+            <option value="telefonia">Telefonía</option>
+          </select>
+        </label>
+        <code class="consulta" id="consulta-actual">GET /api/equipos</code>
+      </div>
+
+      <div id="aviso-filtro"></div>
+      <div id="listado-zona">
+        <p class="cargando">Cargando equipos…</p>
+      </div>
+    </section>
+
+    <!-- ── Diagnóstico ─────────────────────────────────────────── -->
+    <section class="bloque bloque--diagnostico" aria-labelledby="t-diag">
+      <h2 id="t-diag">Estado de la API</h2>
+      <p class="nota">Esta sección revisa qué responde el servidor en este momento. Se actualiza cada vez que recargas la página.</p>
+      <ul class="diagnostico" id="diagnostico-zona"></ul>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>Panel de inventario · Área de TIC</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

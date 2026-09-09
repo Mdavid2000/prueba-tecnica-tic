@@ -1,15 +1,19 @@
+const path = require('path');
 const express = require('express');
 const equipos = require('./data/equipos.json');
 
 const app = express();
 app.use(express.json());
 
+// Sirve el panel web que está en la carpeta /public
+app.use(express.static(path.join(__dirname, 'public')));
+
 const PORT = process.env.PORT || 3000;
 
-// Ruta de bienvenida
-app.get('/', (req, res) => {
+// Información de la API
+app.get('/api', (req, res) => {
   res.json({
-    mensaje: 'API de Inventario TIC - RoboticMinds',
+    nombre: 'API de Inventario TIC - RoboticMinds',
     endpoints: ['GET /api/equipos', 'GET /api/equipos/:id']
   });
 });
@@ -31,5 +35,5 @@ app.get('/api/equipos/:id', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en http://localhost:${PORT}`);
+  console.log(`Panel disponible en http://localhost:${PORT}`);
 });

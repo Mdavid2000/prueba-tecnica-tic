@@ -1,10 +1,12 @@
 {
   "name": "prueba-tecnica-tic",
   "version": "1.0.0",
-  "description": "API de inventario TIC para prueba tecnica de pasante",
+  "description": "Panel de inventario TIC para prueba tecnica de pasante",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "verificar": "node verificar.js"
   },
   "dependencies": {
     "express": "^4.19.2"
