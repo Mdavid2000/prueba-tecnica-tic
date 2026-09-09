@@ -12,9 +12,7 @@ TIC a través de una API, con un panel web que consume esa API.
 ## Instalación
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
-cd prueba-tecnica-tic
-npm install
+git clone https://github.com/Mdavid2000/prueba-tecnica-tic.git
 npm run dev
 ```
 
@@ -58,13 +56,7 @@ Al final del panel hay una sección **Estado de la API** que revisa qué respond
 el servidor en ese momento. Recarga la página después de cada cambio: lo que
 esté pendiente pasará a "Responde" cuando el endpoint funcione.
 
-## Antes de empezar
-
-Crea tu propia rama de trabajo:
-
-```bash
-git checkout -b prueba_<tu-nombre>
-```
+## Antes de empezar ten pendiente estas cosas.
 
 Haz un commit por cada tarea que completes, con un mensaje que describa el
 cambio. No necesitas hacer `push`: al final mostrarás tu historial con
